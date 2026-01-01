@@ -9,3 +9,4 @@ exec:
   ports:
   - port: 8080 
     targetPort: 5431
+  type: NodePort
