@@ -1,0 +1,51 @@
+1.1
+ הורדתי קובץ זיפ
+
+1.2
+ minikube start 
+
+ minikube status 
+ or 
+ minikube version 
+
+2.1
+git checkout -b dockerfile
+git add Dockerfile
+git commit -m "added docker file"
+git push origin dockerfile
+
+2.2 
+docker build -t israelerlan1/streamlit-app .
+
+2.3
+docker run --rm -p 8080 israelerlan1/streamlit-app
+
+2.4 
+docker push israelerlan1/streamlit-app
+
+3.1
+git checkout -b pod 
+git add pod.yaml
+git commit -m "added pod"
+git push origin pod 
+
+3.2 
+git checkout -b service
+git add service.yaml
+git commit -m "added service"
+git push origin service
+
+4.1 
+kubectl apply -f pod.yaml
+kubectl apply -f service.yaml
+minikube service my-service
+
+4.2
+minikube status 
+
+5.1 
+kubectl logs my-service
+kubectk logs my-pod
+
+5.2 
+kubestl describe pod my-pod
